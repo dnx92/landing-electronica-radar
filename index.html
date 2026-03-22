@@ -315,13 +315,13 @@
     </section>
 
     <!-- Servicios -->
-    <section class="py-20 lg:py-28 bg-gray-50" id="servicios">
+    <section class="py-20 lg:py-28" id="servicios" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
                     Nuestros Servicios
                 </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
                     Service técnico especializado para todo tipo de equipos electrónicos. 
                     Encontrá la solución que necesitás.
                 </p>
@@ -329,90 +329,124 @@
             
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Servicio 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                        </svg>
+                <div class="group relative overflow-hidden rounded-3xl h-80 cursor-pointer" onclick="window.open('https://wa.me/543755665972?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20electr%C3%B3nica%20industrial', '_blank')">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Electrónica Industrial" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="filter: blur(2px) brightness(0.4);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 backdrop-blur-sm bg-white/5"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 border border-white/20">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-2">Electrónica Industrial de Potencia</h3>
+                        <p class="text-gray-300 text-sm mb-4">Variadores de frecuencia, PLCs, fuentes switching, inversores y equipos industriales.</p>
+                        <div class="flex items-center gap-2 text-white/80 text-sm font-medium">
+                            <span>Consultar</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                    <h3 class="font-heading text-xl font-bold text-gray-800 mb-3">Electrónica Industrial de Potencia</h3>
-                    <p class="text-gray-600 mb-4">Reparación de variadores de frecuencia, PLCs, fuentes switching, inversores y equipos industriales.</p>
-                    <a href="https://wa.me/543755665972?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20electr%C3%B3nica%20industrial" class="text-primary font-semibold hover:text-accent transition flex items-center gap-2">
-                        Consultar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
                 
                 <!-- Servicio 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
-                        </svg>
+                <div class="group relative overflow-hidden rounded-3xl h-80 cursor-pointer" onclick="window.open('https://wa.me/543755665972?text=Hola%2C%20necesito%20reparar%20una%20soldadora%20inverter', '_blank')">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="Soldadoras Inverter" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="filter: blur(2px) brightness(0.4);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 backdrop-blur-sm bg-white/5"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 border border-white/20">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-2">Soldadoras Inverter</h3>
+                        <p class="text-gray-300 text-sm mb-4">Reparación de soldadoras MIG, TIG y cortadoras de plasma.</p>
+                        <div class="flex items-center gap-2 text-white/80 text-sm font-medium">
+                            <span>Consultar</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                    <h3 class="font-heading text-xl font-bold text-gray-800 mb-3">Soldadoras Inverter</h3>
-                    <p class="text-gray-600 mb-4">Reparación de soldadoras MIG, TIG y cortadoras de plasma. Servicio técnico especializado.</p>
-                    <a href="https://wa.me/543755665972?text=Hola%2C%20necesito%20reparar%20una%20soldadora%20inverter" class="text-primary font-semibold hover:text-accent transition flex items-center gap-2">
-                        Consultar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
                 
                 <!-- Servicio 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
+                <div class="group relative overflow-hidden rounded-3xl h-80 cursor-pointer" onclick="window.open('https://wa.me/543755665972?text=Hola%2C%20necesito%20reparar%20mi%20computadora', '_blank')">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c228e9c7f3?w=600&q=80" alt="Computadoras" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="filter: blur(2px) brightness(0.4);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 backdrop-blur-sm bg-white/5"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 border border-white/20">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-2">Computadoras y TV</h3>
+                        <p class="text-gray-300 text-sm mb-4">Reparación de laptops, PC de escritorio, upgrade y mantenimiento.</p>
+                        <div class="flex items-center gap-2 text-white/80 text-sm font-medium">
+                            <span>Consultar</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                    <h3 class="font-heading text-xl font-bold text-gray-800 mb-3">Computadoras</h3>
-                    <p class="text-gray-600 mb-4">Reparación de laptops, PC de escritorio, upgrade, limpieza, recuperación de datos y más.</p>
-                    <a href="https://wa.me/543755665972?text=Hola%2C%20necesito%20reparar%20mi%20computadora" class="text-primary font-semibold hover:text-accent transition flex items-center gap-2">
-                        Consultar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
                 
                 <!-- Servicio 4 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                        </svg>
+                <div class="group relative overflow-hidden rounded-3xl h-80 cursor-pointer" onclick="window.open('https://wa.me/543755665972?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20refrigeraci%C3%B3n%20industrial', '_blank')">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80" alt="Refrigeración Industrial" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="filter: blur(2px) brightness(0.4);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 backdrop-blur-sm bg-white/5"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 border border-white/20">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-2">Refrigeración Industrial</h3>
+                        <p class="text-gray-300 text-sm mb-4">Cámaras frigoríficas, freezers industriales, climatización.</p>
+                        <div class="flex items-center gap-2 text-white/80 text-sm font-medium">
+                            <span>Consultar</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                    <h3 class="font-heading text-xl font-bold text-gray-800 mb-3">Refrigeración Industrial</h3>
-                    <p class="text-gray-600 mb-4">Instalación y reparación de cámaras frigoríficas,freezers industriales, cámaras de frío y equipos de climatización.</p>
-                    <a href="https://wa.me/543755665972?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20refrigeraci%C3%B3n%20industrial" class="text-primary font-semibold hover:text-accent transition flex items-center gap-2">
-                        Consultar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
                 
                 <!-- Servicio 5 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
+                <div class="group relative overflow-hidden rounded-3xl h-80 cursor-pointer" onclick="window.open('https://wa.me/543755665972?text=Hola%2C%20necesito%20reparar%20un%20equipo%20de%20l%C3%ADnea%20blanca', '_blank')">
+                    <img src="https://images.unsplash.com/photo-1571175443880-52e25ed2bq5?w=600&q=80" alt="Línea Blanca Inverter" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="filter: blur(2px) brightness(0.4);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 backdrop-blur-sm bg-white/5"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 border border-white/20">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-2">Línea Blanca Inverter</h3>
+                        <p class="text-gray-300 text-sm mb-4">Lavarropas, heladeras, split y multi-split inverter.</p>
+                        <div class="flex items-center gap-2 text-white/80 text-sm font-medium">
+                            <span>Consultar</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                    <h3 class="font-heading text-xl font-bold text-gray-800 mb-3">Línea Blanca Inverter</h3>
-                    <p class="text-gray-600 mb-4">Reparación de lavarropas, heladeras, split y multi-split inverter. Placas electrónicas y diagnóstico de fallas.</p>
-                    <a href="https://wa.me/543755665972?text=Hola%2C%20necesito%20reparar%20un%20equipo%20de%20l%C3%ADnea%20blanca" class="text-primary font-semibold hover:text-accent transition flex items-center gap-2">
-                        Consultar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
                 
                 <!-- Servicio 6 -->
-                <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 shadow-xl card-hover text-white">
-                    <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
+                <div class="group relative overflow-hidden rounded-3xl h-80 cursor-pointer" onclick="window.open('https://wa.me/543755665972?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20inversores%20solares%20y%20bater%C3%ADas', '_blank')">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Inversores Solares" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="filter: blur(2px) brightness(0.4);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 backdrop-blur-sm bg-white/5"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 border border-white/20">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-2">Inversores Solares y Baterías</h3>
+                        <p class="text-gray-300 text-sm mb-4">Reparación de inversores y sistemas de energía solar.</p>
+                        <div class="flex items-center gap-2 text-white/80 text-sm font-medium">
+                            <span>Consultar</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </div>
                     </div>
-                    <h3 class="font-heading text-xl font-bold mb-3">Service a Domicilio</h3>
-                    <p class="text-white/90 mb-4">Nuestro técnico llega a tu casa o empresa. Service en Oberá y alrededores.</p>
-                    <span class="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
-                        <span class="w-2 h-2 bg-green-400 rounded-full"></span>
-                        Disponible ahora
-                    </span>
                 </div>
             </div>
         </div>
