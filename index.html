@@ -1310,14 +1310,38 @@
 
         async function handleAdminLogin(e) {
             e.preventDefault();
+            const email = document.getElementById('admin-email').value;
             const password = document.getElementById('admin-password').value;
+            const errorEl = document.getElementById('admin-login-error');
+            const submitBtn = document.getElementById('admin-submit-btn');
             
-            if (password === 'admin123') {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Verificando...';
+            
+            try {
+                const { data, error } = await supabaseClient
+                    .from('admins')
+                    .select('*')
+                    .eq('email', email)
+                    .eq('password_hash', password)
+                    .single();
+                
+                if (error || !data) {
+                    errorEl.textContent = 'Email o contraseña incorrectos';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Ingresar';
+                    return;
+                }
+                
                 isAdminLogged = true;
+                localStorage.setItem('admin_token', 'logged_in');
                 toggleAdminModal();
                 showAdminDashboard();
-            } else {
-                document.getElementById('admin-login-error').textContent = 'Contraseña incorrecta';
+                
+            } catch (err) {
+                errorEl.textContent = 'Error de conexión';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Ingresar';
             }
         }
 
@@ -1439,7 +1463,16 @@
         function closeAdminPanel() {
             document.getElementById('admin-panel').classList.add('hidden');
             isAdminLogged = false;
+            localStorage.removeItem('admin_token');
         }
+        
+        // Check if admin was logged in before
+        function checkAdminSession() {
+            if (localStorage.getItem('admin_token') === 'logged_in') {
+                showAdminDashboard();
+            }
+        }
+        checkAdminSession();
     </script>
 
     <!-- Admin Login Modal -->
@@ -1450,13 +1483,19 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                 </svg>
                 <h3 class="text-xl font-bold">Panel de Administración</h3>
-                <p class="text-white/60 text-sm mt-1">Ingresá la contraseña</p>
+                <p class="text-white/60 text-sm mt-1">Ingresá tus datos</p>
             </div>
             <form onsubmit="handleAdminLogin(event)" class="p-6">
-                <input type="password" id="admin-password" required placeholder="Contraseña"
-                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-800 focus:border-gray-800 outline-none mb-4">
+                <div class="mb-3">
+                    <input type="email" id="admin-email" required placeholder="Email admin"
+                           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-800 focus:border-gray-800 outline-none">
+                </div>
+                <div class="mb-4">
+                    <input type="password" id="admin-password" required placeholder="Contraseña"
+                           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-800 focus:border-gray-800 outline-none">
+                </div>
                 <p id="admin-login-error" class="text-red-500 text-sm mb-4 text-center"></p>
-                <button type="submit" class="w-full bg-gray-800 text-white py-3 rounded-xl font-bold hover:bg-gray-900 transition">
+                <button type="submit" id="admin-submit-btn" class="w-full bg-gray-800 text-white py-3 rounded-xl font-bold hover:bg-gray-900 transition">
                     Ingresar
                 </button>
                 <button type="button" onclick="toggleAdminModal()" class="w-full mt-3 text-gray-500 hover:text-gray-700 text-sm">
