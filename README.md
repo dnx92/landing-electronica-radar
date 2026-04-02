@@ -26,6 +26,7 @@ Landing page profesional para **Electrónica Mulka NEA**, un service técnico de
 
 - **ID de Editor:** `ca-pub-8997813107321023`
 - **Script:** Ubicado en `<head>` (líneas 4-5)
+- **Archivo ads.txt:** Ubicado en raíz del sitio
 - **Estado:** ✅ Implementado y funcionando
 
 ---
