@@ -28,7 +28,12 @@ El sitio ya está funcionando con:
 - 3 testimonios
 - Mapa de ubicación
 - Widget de chat WhatsApp
-- Google AdSense (ca-pub-8997813107321023)
+- ✅ **Google AdSense ACTIVADO** (ca-pub-8997813107321023) - Script agregado en `<head>`
+
+### Estado de Monetización
+- Google AdSense: **IMPLEMENTADO** ✅
+- ID: `ca-pub-8997813107321023`
+- Script ubicado en línea 4-5 de index.html
 
 ### Cambios Recientes
 - Landing page completa funcional
