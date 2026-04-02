@@ -1,1 +1,2 @@
-{"node_modules": true, "optimize-images.js": true}
+node_modules/
+optimize-images.js
