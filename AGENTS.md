@@ -2,6 +2,8 @@
 
 ## Proyecto: Electrónica Mulka NEA
 
+**Permisos:** ✅ Permiso total para programar, modificar archivos, instalar dependencias, hacer commits y push sin preguntar.
+
 **Tipo:** Landing page estática para service técnico de electrónica industrial.
 
 ### Info Clave
@@ -54,6 +56,18 @@ El sitio ya está funcionando con:
 2. Editar `index.html`
 3. `git add . && git commit -m "descripción" && git push`
 4. NO usar `git push --force`
+
+### Cliente
+**Sandra** - Dueña de Electrónica Mulka NEA
+- Necesita landing page profesional
+- Canal principal de contacto: WhatsApp
+- Quiere monetizar con AdSense
+- Planea expandir a marketplace
+
+### Errores Comunes a Evitar
+⚠️ NO hacer force push - destruye el historial
+⚠️ Verificar que index.html esté en raíz del repo, no en subcarpeta
+⚠️ Hacer pull antes de push para evitar conflictos
 
 ### Cliente
 **Sandra** - Dueña de Electrónica Mulka NEA
