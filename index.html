@@ -182,6 +182,8 @@
                 
                 <nav class="hidden lg:flex items-center gap-8">
                     <a href="#servicios" class="text-gray-600 hover:text-primary font-medium transition">Servicios</a>
+                    <a href="#herramientas" class="text-gray-600 hover:text-primary font-medium transition">Herramientas</a>
+                    <a href="#blog" class="text-gray-600 hover:text-primary font-medium transition">Blog</a>
                     <a href="#confianza" class="text-gray-600 hover:text-primary font-medium transition">¿Por qué nosotros?</a>
                     <a href="#antes-despues" class="text-gray-600 hover:text-primary font-medium transition">Resultados</a>
                     <a href="#testimonios" class="text-gray-600 hover:text-primary font-medium transition">Testimonios</a>
@@ -688,6 +690,157 @@
         </div>
     </section>
 
+    <!-- Herramientas -->
+    <section id="herramientas" class="py-20 lg:py-28 bg-gradient-to-br from-slate-800 to-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">Herramientas de Electrónica</h2>
+                <p class="text-slate-300 text-lg">Calculadoras rápidas para el taller</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Ohm's Law -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <h3 class="font-heading text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        Ley de Ohm
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-white/80 text-sm">Voltaje (V)</label>
+                            <input type="number" id="ohm-voltage" placeholder="V" class="w-full px-3 py-2 rounded-lg bg-white/20 text-white border border-white/30 outline-none focus:border-accent">
+                        </div>
+                        <div>
+                            <label class="text-white/80 text-sm">Corriente (I)</label>
+                            <input type="number" id="ohm-current" placeholder="A" class="w-full px-3 py-2 rounded-lg bg-white/20 text-white border border-white/30 outline-none focus:border-accent">
+                        </div>
+                        <div>
+                            <label class="text-white/80 text-sm">Resistencia (R)</label>
+                            <input type="number" id="ohm-resistance" placeholder="Ω" class="w-full px-3 py-2 rounded-lg bg-white/20 text-white border border-white/30 outline-none focus:border-accent">
+                        </div>
+                        <button onclick="calcOhm()" class="bg-accent text-white px-6 py-2 rounded-lg font-bold hover:bg-accent/80 transition w-full">Calcular</button>
+                        <div id="ohm-result" class="text-green-400 font-bold text-lg text-center hidden"></div>
+                    </div>
+                </div>
+
+                <!-- Power -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <h3 class="font-heading text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        Cálculo de Potencia
+                    </h3>
+                    <p class="text-white/60 text-sm mb-4">P = V × I &nbsp;|&nbsp; P = I² × R &nbsp;|&nbsp; P = V² / R</p>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-white/80 text-sm">Voltaje (V)</label>
+                            <input type="number" id="power-voltage" placeholder="V" class="w-full px-3 py-2 rounded-lg bg-white/20 text-white border border-white/30 outline-none focus:border-accent">
+                        </div>
+                        <div>
+                            <label class="text-white/80 text-sm">Corriente (I)</label>
+                            <input type="number" id="power-current" placeholder="A" class="w-full px-3 py-2 rounded-lg bg-white/20 text-white border border-white/30 outline-none focus:border-accent">
+                        </div>
+                        <div>
+                            <label class="text-white/80 text-sm">Resistencia (R)</label>
+                            <input type="number" id="power-resistance" placeholder="Ω" class="w-full px-3 py-2 rounded-lg bg-white/20 text-white border border-white/30 outline-none focus:border-accent">
+                        </div>
+                        <button onclick="calcPower()" class="bg-accent text-white px-6 py-2 rounded-lg font-bold hover:bg-accent/80 transition w-full">Calcular</button>
+                        <div id="power-result" class="text-green-400 font-bold text-lg text-center hidden"></div>
+                    </div>
+                </div>
+
+                <!-- Series Resistors -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <h3 class="font-heading text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/></svg>
+                        Resistencias en Serie
+                    </h3>
+                    <p class="text-white/60 text-sm mb-4">R<sub>total</sub> = R1 + R2 + R3 + ...</p>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-white/80 text-sm">Resistencias (separadas por coma)</label>
+                            <input type="text" id="series-resistors" placeholder="100, 220, 330" class="w-full px-3 py-2 rounded-lg bg-white/20 text-white border border-white/30 outline-none focus:border-accent">
+                        </div>
+                        <button onclick="calcSeries()" class="bg-accent text-white px-6 py-2 rounded-lg font-bold hover:bg-accent/80 transition w-full">Calcular</button>
+                        <div id="series-result" class="text-green-400 font-bold text-lg text-center hidden"></div>
+                    </div>
+                </div>
+
+                <!-- Parallel Resistors -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <h3 class="font-heading text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+                        Resistencias en Paralelo
+                    </h3>
+                    <p class="text-white/60 text-sm mb-4">1/R<sub>total</sub> = 1/R1 + 1/R2 + 1/R3 + ...</p>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-white/80 text-sm">Resistencias (separadas por coma)</label>
+                            <input type="text" id="parallel-resistors" placeholder="100, 220, 330" class="w-full px-3 py-2 rounded-lg bg-white/20 text-white border border-white/30 outline-none focus:border-accent">
+                        </div>
+                        <button onclick="calcParallel()" class="bg-accent text-white px-6 py-2 rounded-lg font-bold hover:bg-accent/80 transition w-full">Calcular</button>
+                        <div id="parallel-result" class="text-green-400 font-bold text-lg text-center hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-accent font-bold text-sm tracking-widest uppercase">Blog Técnico</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-gray-800 mt-2">Consejos y Novedades</h2>
+                <p class="text-gray-500 mt-2">Tips de reparación, mantenimiento y electrónica</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-br from-primary/20 to-secondary/20 p-6 h-40 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-accent font-bold">MANTENIMIENTO</span>
+                        <h3 class="font-heading font-bold text-gray-800 text-lg mt-1">¿Por qué se queman los variadores?</h3>
+                        <p class="text-gray-500 text-sm mt-2">Las causas más comunes y cómo prevenirlo con mantenimiento periódico.</p>
+                        <a href="https://wa.me/543755665972?text=Hola%2C%20vi%20el%20art%C3%ADculo%20de%20variadores" target="_blank" class="text-primary font-semibold text-sm mt-4 inline-flex items-center gap-1 hover:underline">
+                            Consultar
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-br from-green-500/20 to-emerald-500/20 p-6 h-40 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-green-500/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-green-600 font-bold">AHORRO</span>
+                        <h3 class="font-heading font-bold text-gray-800 text-lg mt-1">Reparar vs Comprar: ¿Qué conviene?</h3>
+                        <p class="text-gray-500 text-sm mt-2">Comparativa de costos y beneficios entre reparar equipos o comprar nuevos.</p>
+                        <a href="https://wa.me/543755665972?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20reparar%20vs%20comprar" target="_blank" class="text-primary font-semibold text-sm mt-4 inline-flex items-center gap-1 hover:underline">
+                            Consultar
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-6 h-40 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-blue-500/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-blue-600 font-bold">TUTORIAL</span>
+                        <h3 class="font-heading font-bold text-gray-800 text-lg mt-1">Cómo probar una fuente conmutada</h3>
+                        <p class="text-gray-500 text-sm mt-2">Pasos básicos para diagnosticar fuentes de alimentación con multímetro.</p>
+                        <a href="https://wa.me/543755665972?text=Hola%2C%20necesito%20ayuda%20con%20fuentes%20conmutadas" target="_blank" class="text-primary font-semibold text-sm mt-4 inline-flex items-center gap-1 hover:underline">
+                            Consultar
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Final -->
     <section class="py-20 lg:py-28 bg-gradient-to-r from-primary to-secondary">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -921,6 +1074,47 @@
             const encodedMessage = encodeURIComponent(message);
             window.open('https://wa.me/543755665972?text=' + encodedMessage, '_blank');
             toggleChat();
+        }
+        
+        function showResult(id, text, isGood) {
+            const el = document.getElementById(id);
+            el.classList.remove('hidden');
+            el.textContent = text;
+            el.className = (isGood ? 'text-green-400' : 'text-red-400') + ' font-bold text-lg text-center';
+        }
+
+        function calcOhm() {
+            const v = parseFloat(document.getElementById('ohm-voltage').value);
+            const i = parseFloat(document.getElementById('ohm-current').value);
+            const r = parseFloat(document.getElementById('ohm-resistance').value);
+            if (v && i && !r) showResult('ohm-result', `R = ${(v/i).toFixed(2)} Ω`, true);
+            else if (v && r && !i) showResult('ohm-result', `I = ${(v/r).toFixed(4)} A`, true);
+            else if (i && r && !v) showResult('ohm-result', `V = ${(i*r).toFixed(2)} V`, true);
+            else showResult('ohm-result', 'Dejá un campo vacío para calcularlo', false);
+        }
+        
+        function calcPower() {
+            const v = parseFloat(document.getElementById('power-voltage').value);
+            const i = parseFloat(document.getElementById('power-current').value);
+            const r = parseFloat(document.getElementById('power-resistance').value);
+            if (v && i) showResult('power-result', `P = ${(v*i).toFixed(2)} W`, true);
+            else if (i && r) showResult('power-result', `P = ${(i*i*r).toFixed(2)} W`, true);
+            else if (v && r) showResult('power-result', `P = ${(v*v/r).toFixed(2)} W`, true);
+            else showResult('power-result', 'Completá al menos 2 campos', false);
+        }
+        
+        function calcSeries() {
+            const vals = document.getElementById('series-resistors').value.split(',').map(Number).filter(n => !isNaN(n) && n > 0);
+            if (vals.length < 2) return showResult('series-result', 'Ingresá al menos 2 resistencias', false);
+            const total = vals.reduce((a, b) => a + b, 0);
+            showResult('series-result', `R<sub>total</sub> = ${total.toFixed(2)} Ω`, true);
+        }
+        
+        function calcParallel() {
+            const vals = document.getElementById('parallel-resistors').value.split(',').map(Number).filter(n => !isNaN(n) && n > 0);
+            if (vals.length < 2) return showResult('parallel-result', 'Ingresá al menos 2 resistencias', false);
+            const total = 1 / vals.reduce((a, b) => a + 1/b, 0);
+            showResult('parallel-result', `R<sub>total</sub> = ${total.toFixed(2)} Ω`, true);
         }
     </script>
 </body>

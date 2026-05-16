@@ -28,6 +28,8 @@ El sitio ya está funcionando con:
 - 3 testimonios
 - Mapa de ubicación
 - Widget de chat WhatsApp
+- Herramientas de electrónica (Ley de Ohm, Potencia, Series/Paralelo)
+- Blog técnico (3 artículos)
 - ✅ **Google AdSense ACTIVADO** (ca-pub-8997813107321023) - Script agregado en `<head>`
 
 ### Estado de Monetización
