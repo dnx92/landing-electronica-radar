@@ -19,8 +19,11 @@
 - Sin backend (página estática)
 
 ### Estructura Principal
-- `index.html` - Todo el sitio (927 líneas)
+- `index.html` - Todo el sitio (1121 líneas)
 - `resultado-*.webp` - Imágenes de resultados de reparaciones
+- `AGENTS.md` - Guía para IA
+- `README.md` - Documentación del proyecto
+- `ads.txt` - Verificación de Google AdSense
 
 ### Sección Actual del Proyecto
 El sitio ya está funcionando con:
@@ -32,7 +35,8 @@ El sitio ya está funcionando con:
 - Widget de chat WhatsApp
 - Herramientas de electrónica (Ley de Ohm, Potencia, Series/Paralelo)
 - Blog técnico (3 artículos)
-- ✅ **Google AdSense ACTIVADO** (ca-pub-8997813107321023) - Script agregado en `<head>`
+- Google AdSense activado (ca-pub-8997813107321023)
+- **Producción:** https://hola-mundo-docker.vercel.app
 
 ### Estado de Monetización
 - Google AdSense: **IMPLEMENTADO** ✅
@@ -56,18 +60,6 @@ El sitio ya está funcionando con:
 2. Editar `index.html`
 3. `git add . && git commit -m "descripción" && git push`
 4. NO usar `git push --force`
-
-### Cliente
-**Sandra** - Dueña de Electrónica Mulka NEA
-- Necesita landing page profesional
-- Canal principal de contacto: WhatsApp
-- Quiere monetizar con AdSense
-- Planea expandir a marketplace
-
-### Errores Comunes a Evitar
-⚠️ NO hacer force push - destruye el historial
-⚠️ Verificar que index.html esté en raíz del repo, no en subcarpeta
-⚠️ Hacer pull antes de push para evitar conflictos
 
 ### Cliente
 **Sandra** - Dueña de Electrónica Mulka NEA

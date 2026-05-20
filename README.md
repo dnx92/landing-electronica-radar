@@ -7,7 +7,7 @@ Landing page profesional para **Electrónica Mulka NEA**, un service técnico de
 - **WhatsApp:** +54 9 3755 665972
 - **Ubicación:** Bahía Blanca 1551 N 3361, N3360 Oberá, Misiones
 - **GitHub:** https://github.com/dnx92/landing-electronica-radar
-- **Vercel:** https://landing-electronica-radar.vercel.app
+- **Vercel:** https://hola-mundo-docker.vercel.app
 
 ---
 
@@ -34,10 +34,13 @@ Landing page profesional para **Electrónica Mulka NEA**, un service técnico de
 ## Estructura de Archivos
 
 ```
-├── index.html          # Página principal (927 líneas)
+├── index.html          # Página principal (1121 líneas)
 ├── resultado-*.webp   # Imágenes optimizadas
-├── .gitignore         # Archivos ignorados
-└── Dockerfile         # Docker (no usado activamente)
+├── AGENTS.md           # Guía rápida para IA
+├── README.md           # Documentación del proyecto
+├── ads.txt             # Verificación Google AdSense
+├── .gitignore          # Archivos ignorados
+└── Dockerfile          # Docker (no usado activamente)
 ```
 
 ---
@@ -55,6 +58,8 @@ Landing page profesional para **Electrónica Mulka NEA**, un service técnico de
 9. **Footer** - Links, contacto, redes sociales
 10. **Chat Widget** - Widget flotante con opciones rápidas de WhatsApp
 11. **WhatsApp Button** - Botón flotante móvil
+12. **Herramientas** - Ley de Ohm, Potencia, Serie/Paralelo (calculadoras interactivas)
+13. **Blog Técnico** - 3 artículos con CTA a WhatsApp
 
 ---
 
